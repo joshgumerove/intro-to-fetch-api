@@ -13,3 +13,14 @@ fetch("https://openlibrary.org/works/OL45804W.json")
   .then((data) => {
     console.log(data.subjects);
   });
+
+//  a promise can be wrapped around any function, but usually want to use an asyrnchronous function
+
+const firstPromise = new Promise((resolve, reject) => {
+  const animal = "warthog";
+  resolve(animal);
+});
+
+firstPromise.then((res) => console.log(res)); // do not have to change
+
+// if resolve() is called, then the then() method will run
